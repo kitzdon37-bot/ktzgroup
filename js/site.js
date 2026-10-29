@@ -308,29 +308,6 @@
     });
   }
 
-  /* ── Curseur personnalisé ── */
-  if (finePointer && !reduce) {
-    const dot = document.querySelector('.cursor-dot');
-    const ring = document.querySelector('.cursor-ring');
-    let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
-    addEventListener('pointermove', e => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.transform = `translate(${mx}px, ${my}px)`;
-      root.classList.add('has-cursor');
-    }, { passive: true });
-    document.addEventListener('pointerleave', () => root.classList.remove('has-cursor'));
-    const loop = () => {
-      rx += (mx - rx) * 0.16;
-      ry += (my - ry) * 0.16;
-      ring.style.transform = `translate(${rx}px, ${ry}px)`;
-      requestAnimationFrame(loop);
-    };
-    loop();
-    document.addEventListener('pointerover', e => {
-      ring.classList.toggle('hover', !!e.target.closest('a, button, input, select, textarea, [data-tilt]'));
-    });
-  }
-
   /* ── Hero : logo qui suit la souris ── */
   const hero = document.querySelector('.hero');
   const heroLogo = document.querySelector('.hero-logo');
@@ -355,7 +332,7 @@
     W = canvas.clientWidth; H = canvas.clientHeight;
     canvas.width = W * dpr; canvas.height = H * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const n = Math.min(120, Math.round((W * H) / 13000));
+    const n = Math.min(70, Math.round((W * H) / 20000));
     parts = Array.from({ length: n }, () => ({
       x: Math.random() * W, y: Math.random() * H,
       vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.35,
