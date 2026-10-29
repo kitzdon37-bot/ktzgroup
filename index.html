@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="css/site.css?v=7">
+<link rel="stylesheet" href="css/site.css?v=8">
 </head>
 <body>
 
@@ -241,9 +241,15 @@
         <h2 data-split><span class="grad">7 missions</span> réalisées</h2>
         <p class="lead" data-reveal>Des prestations concrètes, vérifiables, réalisées depuis la création du groupe en 2026.</p>
       </div>
-      <div class="hs-meter" aria-hidden="true">
-        <span class="hs-count">01</span><span class="hs-total">/ 07</span>
-        <div class="hs-bar"><i></i></div>
+      <div class="hs-controls">
+        <div class="hs-meter" aria-hidden="true">
+          <span class="hs-count">01</span><span class="hs-total">/ 07</span>
+          <div class="hs-bar"><i></i></div>
+        </div>
+        <div class="hs-arrows">
+          <button class="hs-arrow hs-prev" type="button" aria-label="Mission précédente" data-magnetic><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button class="hs-arrow hs-next" type="button" aria-label="Mission suivante" data-magnetic><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
       </div>
     </div>
     <div class="hs-viewport">
@@ -513,6 +519,6 @@
   </div>
 </footer>
 
-<script src="js/site.js?v=3"></script>
+<script src="js/site.js?v=11"></script>
 </body>
 </html>

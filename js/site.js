@@ -9,6 +9,16 @@
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
   const easeOut = t => 1 - Math.pow(1 - t, 3);
 
+  /* ── Références : copie des cartes pour la boucle infinie (avant les autres liaisons) ── */
+  const refTrack = document.querySelector('.hs-track');
+  const refOriginals = [...refTrack.children];
+  refOriginals.forEach(card => {
+    const copy = card.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    copy.querySelectorAll('a').forEach(a => a.setAttribute('tabindex', '-1'));
+    refTrack.append(copy);
+  });
+
   /* ── Découpe des titres en mots ── */
   document.querySelectorAll('[data-split]').forEach(el => {
     let i = 0;
@@ -132,37 +142,101 @@
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
   addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
-  /* ── Références : défilement horizontal épinglé ── */
+  /* ── Références : carrousel qui défile tout seul ── */
   const hs = document.querySelector('.hscroll');
-  const track = hs.querySelector('.hs-track');
+  const hsViewport = hs.querySelector('.hs-viewport');
   const hsCount = hs.querySelector('.hs-count');
   const hsBar = hs.querySelector('.hs-bar i');
-  const refs = track.children.length;
-  const pinnedMode = () => innerWidth >= 900 && !reduce;
-  let hsDist = 0;
+  const refs = refOriginals.length;
+  const SPEED = 60;            // px par seconde
+  let offset = 0;              // décalage courant de la piste
+  let setW = 1;                // largeur d'un jeu complet de cartes
+  let step = 1;                // largeur d'une carte + espace
+  let hovered = false, dragging = false, inView = false, glide = null;
 
-  const sizeHs = () => {
-    if (pinnedMode()) {
-      hs.classList.add('pinned');
-      hsDist = Math.max(0, track.scrollWidth - innerWidth);
-      hs.style.height = (hsDist + innerHeight) + 'px';
-    } else {
-      hs.classList.remove('pinned');
-      hs.style.height = '';
-      track.style.transform = '';
+  const measure = () => {
+    setW = refTrack.children[refs].offsetLeft - refOriginals[0].offsetLeft;
+    step = refOriginals[1].offsetLeft - refOriginals[0].offsetLeft;
+  };
+  const wrap = v => ((v % setW) + setW) % setW;
+  const render = () => {
+    offset = wrap(offset);
+    refTrack.style.transform = `translate3d(${-offset}px,0,0)`;
+    const idx = Math.round(offset / step) % refs;
+    hsCount.textContent = String(idx + 1).padStart(2, '0');
+    hsBar.style.transform = `scaleX(${(idx + 1) / refs})`;
+  };
+  // glissement animé vers une carte (flèches)
+  const glideTo = target => {
+    // la position est ramenée à un seul tour : on vise la copie de la carte la plus proche
+    const to = target + Math.round((offset - target) / setW) * setW;
+    glide = { from: offset, to, t0: performance.now(), dur: 700 };
+  };
+  const goBy = dir => {
+    // clics rapides : on part de la destination en cours pour avancer d'une carte par clic
+    const from = glide ? glide.to : offset;
+    const base = Math.round(from / step) * step;
+    glideTo(base + dir * step);
+  };
+  hs.querySelector('.hs-prev').addEventListener('click', () => goBy(-1));
+  hs.querySelector('.hs-next').addEventListener('click', () => goBy(1));
+
+  // pause au survol et au clavier
+  hsViewport.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') hovered = true; });
+  hsViewport.addEventListener('pointerleave', () => { hovered = false; });
+  hsViewport.addEventListener('focusin', () => { hovered = true; });
+  hsViewport.addEventListener('focusout', () => { hovered = false; });
+  new IntersectionObserver(([e]) => { inView = e.isIntersecting; }).observe(hsViewport);
+
+  // glisser à la souris ou au doigt
+  let dragX = 0, dragStart = 0, moved = 0, lastMoveX = 0, lastMoveT = 0, velocity = 0;
+  hsViewport.addEventListener('pointerdown', e => {
+    if (e.button !== 0) return;
+    dragging = true; glide = null; moved = 0; velocity = 0;
+    dragX = e.clientX; dragStart = offset; lastMoveX = e.clientX; lastMoveT = performance.now();
+    hsViewport.classList.add('dragging');
+  });
+  addEventListener('pointermove', e => {
+    if (!dragging) return;
+    const dx = e.clientX - dragX;
+    moved = Math.max(moved, Math.abs(dx));
+    if (moved > 4 && !hsViewport.hasPointerCapture(e.pointerId)) hsViewport.setPointerCapture(e.pointerId);
+    offset = dragStart - dx;
+    const now = performance.now();
+    velocity = (lastMoveX - e.clientX) / Math.max(1, now - lastMoveT) * 1000;
+    lastMoveX = e.clientX; lastMoveT = now;
+    render();
+  });
+  const endDrag = () => {
+    if (!dragging) return;
+    dragging = false;
+    hsViewport.classList.remove('dragging');
+    // élan puis arrêt sur la carte la plus proche
+    const fling = clamp(velocity * 0.25, -step * 2, step * 2);
+    glideTo(Math.round((offset + fling) / step) * step);
+  };
+  addEventListener('pointerup', endDrag);
+  addEventListener('pointercancel', endDrag);
+  // un glisser ne doit pas ouvrir le lien de la carte
+  hsViewport.addEventListener('click', e => { if (moved > 6) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+  let lastT = performance.now();
+  const carouselLoop = now => {
+    const dt = Math.min(1000, now - lastT) / 1000; // au-delà (onglet en veille), on ne rattrape pas
+    lastT = now;
+    if (glide) {
+      const p = clamp((now - glide.t0) / glide.dur, 0, 1);
+      offset = glide.from + (glide.to - glide.from) * easeOut(p);
+      if (p >= 1) glide = null;
+      render();
+    } else if (!dragging && !hovered && inView && !reduce && !document.hidden) {
+      offset += SPEED * dt;
+      render();
     }
+    requestAnimationFrame(carouselLoop);
   };
-  const setHsProgress = p => {
-    const idx = Math.min(refs, Math.floor(p * refs) + 1);
-    hsCount.textContent = String(idx).padStart(2, '0');
-    hsBar.style.transform = `scaleX(${Math.max(1 / refs, p)})`;
-  };
-  // sur mobile, la piste défile nativement
-  hs.querySelector('.hs-viewport').addEventListener('scroll', e => {
-    if (pinnedMode()) return;
-    const v = e.currentTarget;
-    setHsProgress(v.scrollLeft / Math.max(1, v.scrollWidth - v.clientWidth));
-  }, { passive: true });
+  const sizeHs = () => { measure(); render(); };
+  requestAnimationFrame(carouselLoop);
 
   /* ── Frise de la méthode ── */
   const timeline = document.querySelector('.timeline');
@@ -182,13 +256,6 @@
     nav.classList.toggle('scrolled', y > 30);
     nav.classList.toggle('hidden', y > lastY && y > 600 && !body.classList.contains('menu-open'));
     lastY = y;
-
-    if (pinnedMode()) {
-      const r = hs.getBoundingClientRect();
-      const p = hsDist > 0 ? clamp(-r.top / hsDist, 0, 1) : 0;
-      track.style.transform = `translate3d(${-p * hsDist}px,0,0)`;
-      setHsProgress(p);
-    }
 
     const tr = timeline.getBoundingClientRect();
     const line = innerHeight * 0.6;
