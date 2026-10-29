@@ -1,99 +1,515 @@
-<!DOCTYPE html><!-- Last Publié le: Tue Nonv 18 2025 16:44:03 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="donora.webflow.io" data-wf-page="68ef3517d8f3681d5cbb11d9" data-wf-site="68ef3516d8f3681d5cbb11b5" lang="fr"><head><meta charset="utf-8"/><link href="https://cdn.prod.website-files.com" rel="preconnect"/><title>KTZ GROUP SAS</title><meta content="Empower communities with KTZ GROUP SAS - a modern charity template for nonprofits. Soutien campaigns for education, healthcare, clean water &amp; disaster relief." name="description"/><meta content="KTZ GROUP SAS" property="og:title"/><meta content="Empower communities with KTZ GROUP SAS - a modern charity template for nonprofits. Soutien campaigns for education, healthcare, clean water &amp; disaster relief." property="og:description"/><meta content="images/home-page.png" property="og:image"/><meta content="KTZ GROUP SAS" property="twitter:title"/><meta content="Empower communities with KTZ GROUP SAS - a modern charity template for nonprofits. Soutien campaigns for education, healthcare, clean water &amp; disaster relief." property="twitter:description"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="cdn/68ef3516d8f3681d5cbb11b5/css/donora.webflow.shared.33f99501b.css" rel="stylesheet" type="text/css"/><style>html.w-mod-js:not(.w-mod-ix3) :is(.hero-title, .hero-text, .about-title-text, .section-title) {visibility: hidden !important;}</style><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.classNonm+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.classNonm+=t+"touch")}(window,document);</script><link href="images/favicon.png?v=2" rel="shortcut icon" type="image/x-icon"/><link href="images/webclip.png?v=2" rel="apple-touch-icon"/>
-<style>
-/* ── KTZ Orange Brand Theme ────────────────────────────────── */
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KTZ GROUP SAS — Bâtir la Centrafrique de demain</title>
+<meta name="description" content="KTZ GROUP SAS, société centrafricaine basée à Bangui : emploi, communication, formation, agro-industrie et transformation numérique au service de la RCA.">
+<meta property="og:title" content="KTZ GROUP SAS — Bâtir la Centrafrique de demain">
+<meta property="og:description" content="Emploi · Communication · Formation · Agro-industrie · Digitalisation. Bangui, République Centrafricaine.">
+<meta property="og:image" content="logo-ktzgroup-center.png">
+<meta name="theme-color" content="#0B0B10">
+<link rel="icon" href="images/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="images/webclip.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="css/site.css?v=6">
+</head>
+<body>
 
-/* Boutons CTA principaux → orange */
-.button.is-dark {
-  background-color: #f97316 !important;
-  box-shadow: none !important;
-}
-.button.is-dark:hover {
-  background-color: #ea6a0c !important;
-}
+<!-- Écran de chargement -->
+<div id="preloader" aria-hidden="true">
+  <div class="pre-logo">
+    <img class="ring" src="logo-ktzgroup-ring.png" alt="">
+    <img class="center" src="logo-ktzgroup-center.png" alt="">
+  </div>
+  <div class="pre-num"><span>0</span>%</div>
+</div>
 
-/* Labels de section (ex : "Nos Programmes", "Notre Mission") */
-.section-tag {
-  color: #f97316 !important;
-  font-weight: 700;
-}
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
-/* Lien nav actif / survol */
-.header-menu-nav-link:hover,
-.header-menu-nav-link.w--current {
-  background-color: #f97316 !important;
-  color: #fff !important;
-}
-.header-nav-link:hover,
-.header-nav-link.w--current {
-  color: #f97316 !important;
-}
+<!-- Navigation -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="KTZ GROUP SAS — accueil">
+      <span class="logo-mark">
+        <img class="ring" src="logo-ktzgroup-ring.png" alt="">
+        <img class="center" src="logo-ktzgroup-center.png" alt="KTZ GROUP SAS">
+      </span>
+      <span class="brand-name">KTZ GROUP <em>SAS</em></span>
+    </a>
+    <nav class="links" aria-label="Navigation principale">
+      <a href="#poles">Activités</a>
+      <a href="#histoire">À propos</a>
+      <a href="#references">Références</a>
+      <a href="#equipe">Équipe</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary nav-cta" data-magnetic><span>Nous contacter</span></a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
 
-/* Titres du footer */
-.footer-title {
-  color: #f97316 !important;
-}
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Menu mobile">
+    <a href="#poles">Activités</a>
+    <a href="#histoire">À propos</a>
+    <a href="#references">Références</a>
+    <a href="#equipe">Équipe</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <p class="menu-foot">Bangui · République Centrafricaine</p>
+</div>
 
-/* Liens footer au survol */
-.footer-nav-link:hover,
-.footer-nav-link.w--current {
-  color: #f97316 !important;
-}
+<main id="top">
 
-/* Catégories blog au survol */
-.blog-category:hover {
-  background-color: #f97316 !important;
-  border-color: #f97316 !important;
-  color: #fff !important;
-}
+<!-- HERO -->
+<section class="hero" aria-label="Présentation">
+  <canvas class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="hero-grid" aria-hidden="true"></div>
 
-/* Barre de soulignement bloc À propos */
-.about-hover-dash {
-  background-color: #f97316 !important;
-}
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="pill" data-hero><span class="pulse"></span>République Centrafricaine · Juillet 2026</p>
+      <h1 data-split>Bâtir la <span class="grad">Centrafrique</span><br>de demain</h1>
+      <p class="hero-quote" data-hero>« Agir aujourd'hui pour bâtir la Centrafrique de demain. »</p>
+      <div class="hero-cta" data-hero>
+        <a href="#poles" class="btn btn-primary" data-magnetic><span>Nos activités</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#contact" class="btn btn-ghost" data-magnetic><span>Nous contacter</span></a>
+      </div>
+      <dl class="hero-stats" data-hero>
+        <div><dt><span data-count="2">0</span></dt><dd>Structures complémentaires</dd></div>
+        <div><dt><span data-count="5">0</span></dt><dd>Pôles d'activités</dd></div>
+        <div><dt><span data-count="269">0</span>+</dt><dd>Entreprises ciblées</dd></div>
+        <div><dt><span data-count="2026" data-from="2000">2000</span></dt><dd>Création — Bangui, RCA</dd></div>
+      </dl>
+    </div>
 
-/* Bouton newsletter */
-.submit-button {
-  background-color: #f97316 !important;
-  color: #fff !important;
-  background-image: none !important;
-  padding-right: 30px !important;
-}
+    <div class="hero-visual" data-hero aria-hidden="true">
+      <div class="orbit o1"><b></b></div>
+      <div class="orbit o2"><b></b></div>
+      <div class="orbit o3"><b></b></div>
+      <div class="hero-logo">
+        <img class="ring" src="logo-ktzgroup-ring.png" alt="">
+        <img class="center" src="logo-ktzgroup-center.png" alt="">
+      </div>
+      <div class="glow"></div>
+    </div>
+  </div>
 
-/* Bouton de la page accordion actif */
-.accordion-item.w--current .accordion-head {
-  color: #f97316 !important;
-}
+  <a href="#poles" class="scroll-hint" aria-label="Défiler vers les activités"><span></span></a>
+</section>
 
-/* Titres des programmes → orange */
-.program-title {
-  color: #f97316 !important;
-}
+<!-- Bandeau défilant -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Emploi</span><i>✦</i><span>Communication</span><i>✦</i><span>Formation</span><i>✦</i><span>Agro-industrie</span><i>✦</i><span>Digitalisation</span><i>✦</i>
+    <span>Emploi</span><i>✦</i><span>Communication</span><i>✦</i><span>Formation</span><i>✦</i><span>Agro-industrie</span><i>✦</i><span>Digitalisation</span><i>✦</i>
+  </div>
+</div>
 
-/* Lien "Voir le programme" → orange */
-.icon-text-link .link-text,
-.icon-text-link:hover .link-text {
-  color: #f97316 !important;
-}
-.icon-text-link .link-icon {
-  filter: invert(57%) sepia(79%) saturate(2044%) hue-rotate(358deg) brightness(101%) contrast(95%);
-}
-/* ─────────────────────────────────────────────────────────── */
-</style>
-</head><body><div class="page-wrapper"><header class="section-header"><div class="w-layout-blockcontainer container w-container"><div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar is-white-border w-nav"><a href="/" aria-current="page" class="brand w-nav-brand w--current"><span style="position:relative;display:inline-flex;align-items:center;justify-content:center;width:110px;height:110px;margin-left:12px;flex-shrink:0;">
-  <svg width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;"><g><animateTransform attributeName="transform" type="rotate" from="0 55 55" to="360 55 55" dur="12s" repeatCount="indefinite"/><image href="logo-ktzgroup-ring.png" x="0" y="0" width="110" height="110"/></g></svg><img src="logo-ktzgroup-center.png" alt="KTZ GROUP SAS" style="position:absolute;top:0;left:0;width:110px;height:110px;z-index:2;"/>
-</span></a><nav role="navigation" class="nav-menu w-nav-menu"><a href="/" aria-current="page" class="header-menu-nav-link w-inline-block w--current"><div>Accueil</div></a><a href="/about" class="header-menu-nav-link w-inline-block"><div>Qui sommes-nous</div></a><a href="/programs" class="header-menu-nav-link w-inline-block"><div> Nos Programmes</div></a><a href="/blogs" class="header-menu-nav-link w-inline-block"><div>Blog</div></a><div data-delay="0" data-hover="false" class="dropdown w-dropdown"><div class="header-menu-nav-link w-dropdown-toggle"><div>Pages</div><div class="header-dropdown-icon w-icon-dropdown-toggle"></div></div><nav class="header-dropdown-list w-dropdown-list"><div class="dropdown-nav-area"><div class="dropdown-nav-item"><a href="/" aria-current="page" class="header-nav-link w-inline-block w--current"><div>Accueil</div></a><a href="/programs" class="header-nav-link w-inline-block"><div>Programme</div></a><a href="/blogs" class="header-nav-link w-inline-block"><div>Blog</div></a><a href="/campaigns" class="header-nav-link w-inline-block"><div>Campagnes</div></a><a href="/volunteers" class="header-nav-link w-inline-block"><div>Bénévole</div></a><a href="/donation" class="header-nav-link w-inline-block"><div>Faire un don</div></a></div><div class="dropdown-nav-item"><a href="https://donora.webflow.io/programs/food-relief" class="header-nav-link w-inline-block"><div>Détails du programme</div></a><a href="https://donora.webflow.io/post/clean-water-brings-hope-to-rural-families" class="header-nav-link w-inline-block"><div>Détails de l'article</div></a><a href="https://donora.webflow.io/campaigns/give-educating-orphaned-and-vulnerable-children" class="header-nav-link w-inline-block"><div>Détails de la campagne</div></a></div><div class="dropdown-nav-item"><a href="/faq" class="header-nav-link w-inline-block"><div>FAQ</div></a><a href="/contact" class="header-nav-link w-inline-block"><div>Contact</div></a><a href="/licenses" class="header-nav-link w-inline-block"><div>Licences</div></a></div></div></nav></div></nav><div class="user-event-block"><div class="hide-in-mobile"><a data-w-id="18dc8bea-5b01-69aa-9263-e82d24e0ec2a" href="/donation" class="button is-dark w-inline-block"><div class="button-text-block"><div class="button-text">Faire un don</div><div class="button-text-hover">Faire un don</div></div><div class="button-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348ebff0b38a44459a5_icon-white-arrow-left.svg" loading="lazy" alt="Arrow right" class="button-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348ebff0b38a44459a5_icon-white-arrow-left.svg" loading="lazy" alt="Arrow right" class="button-icon-hover"/></div></a></div><div class="menu-button w-nav-button"><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f2ef5ce733da970a55598c_icon-dark-menu-fill.svg" alt="Menu icon"/></div></div></div></div></header><div class="main-wrapper"><section class="section-hero"><div data-w-id="8f3b0c3c-7442-7d0e-1b50-8b718c97ff15" class="section-background"><div class="hero-space"><div class="w-layout-blockcontainer container w-container"><div class="hero-area"><div class="hero-content-block"><h1 class="hero-title">Ensemble, donnons une chance à chacun</h1><div class="hero-text">Rejoignez-nous pour apporter espoir, aide et soutien durable à ceux qui en ont besoin, grâce à la générosité et à des collectes de fonds qui changent des vies.</div></div></div></div></div><div class="background-image"><img src="images/hero-home-img.webp" loading="lazy" sizes="(max-width: 1919px) 100vw, 1920px" srcset="images/hero-home-img-p-500.webp 500w, images/hero-home-img-p-800.webp 800w, images/hero-home-img-p-1080.webp 1080w, images/hero-home-img-p-1600.webp 1600w, images/hero-home-img.webp 1920w" alt="Several hands of diverse people stacked together, symbolizing unity and teamwork." class="image-cover"/></div><div class="background-overlay"></div></div><script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://youtube.com/watch?v=zrwMbKr-FeU",
-      "originalUrl": "https://youtube.com/watch?v=zrwMbKr-FeU",
-      "width": 940,
-      "height": 528,
-      "thumbnailUrl": "https://i.ytimg.com/vi/zrwMbKr-FeU/hqdefault.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FzrwMbKr-FeU%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzrwMbKr-FeU&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FzrwMbKr-FeU%2Fhqdefault.jpg&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script></a></div></div></section><section class="section-about"><div class="section-space-top"><div class="w-layout-blockcontainer container w-container"><div class="section-container-block"><div class="section-tag">Qui sommes-nous</div><h2 class="about-title-text">Nous renforçons les communautés en apportant du soutien, en semant l'espoir et en changeant des vies grâce à chaque don que nous recevons.</h2></div></div><div data-w-id="c1463248-2a6d-d35c-7615-7edb1d1af957" class="scroll-image-wrapper-block"><div class="scroll-sticky-block"><div class="scroll-content-wrapper"><div class="scroll-content"><div class="scroll-image-block"></div></div></div></div></div><div class="w-layout-blockcontainer container w-container"><div class="about-info-content-area"><div class="about-info-content-block"><h3 class="section-title">Plus de 10 ans à soutenir les communautés avec soin, espoir et des programmes à fort impact.</h3><p class="section-text text-large">Nous nous consacrons à améliorer des vies grâce à des dons significatifs, des projets communautaires et des initiatives bénévoles, en travaillant chaque jour pour répandre l'espoir et créer un changement positif durable.</p><div class="margin-52"><a data-w-id="18dc8bea-5b01-69aa-9263-e82d24e0ec2a" href="/about" class="button is-dark w-inline-block"><div class="button-text-block"><div class="button-text">En savoir plus</div><div class="button-text-hover">En savoir plus</div></div><div class="button-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348ebff0b38a44459a5_icon-white-arrow-left.svg" loading="lazy" alt="Arrow right" class="button-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348ebff0b38a44459a5_icon-white-arrow-left.svg" loading="lazy" alt="Arrow right" class="button-icon-hover"/></div></a></div></div><div class="about-info-list"><div data-w-id="41e1291d-204b-6f35-9abb-fcc372b9bfc5" class="about-info-item"><div class="about-info-text">01.  Fournir des ressources essentielles à ceux dans le besoin</div><div class="about-info-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" alt="Arrow right" class="about-icon"/></div><div style="width:0%" class="about-hover-dash"></div></div><div data-w-id="41e1291d-204b-6f35-9abb-fcc372b9bfcb" class="about-info-item"><div class="about-info-text">02.  Organiser des projets portés par les communautés</div><div class="about-info-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" alt="Arrow right" class="about-icon"/></div><div style="width:0%" class="about-hover-dash"></div></div><div data-w-id="41e1291d-204b-6f35-9abb-fcc372b9bfd1" class="about-info-item"><div class="about-info-text">03.  Soutenir l'éducation, la santé, l'alimentation et les soins</div><div class="about-info-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" alt="Arrow right" class="about-icon"/></div><div style="width:0%" class="about-hover-dash"></div></div><div data-w-id="41e1291d-204b-6f35-9abb-fcc372b9bfd7" class="about-info-item"><div class="about-info-text">04.  Permettre aux bénévoles de faire la différence</div><div class="about-info-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" alt="Arrow right" class="about-icon"/></div><div style="width:0%" class="about-hover-dash"></div></div><div data-w-id="41e1291d-204b-6f35-9abb-fcc372b9bfdd" class="about-info-item"><div class="about-info-text">05.  Suivre l'impact et partager de vraies histoires de succès</div><div class="about-info-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" alt="Arrow right" class="about-icon"/></div><div style="width:0%" class="about-hover-dash"></div></div></div></div></div></div></section><section class="section-campaign"><div class="section-space"><div class="w-layout-blockcontainer container w-container"><div class="max-width-636 margin-inline-auto"><div class="section-content-block text-center"><div data-w-id="734a480e-3749-9178-8b11-c8c3d67cf89b" style="opacity:0" class="section-tag">Campagne en cours</div><h2 class="section-title">Découvrez les campagnes que vous pouvez soutenir</h2></div></div><div data-delay="4000" data-animation="slide" class="slider position-realtive w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true"><div class="w-slider-mask"><div data-w-id="c96ec4fa-a3b6-6e93-cdbe-110411427dd1" class="w-slide"><div class="campaign-list-wrapper w-dyn-list"><div role="list" class="campaign-list w-dyn-items"><div role="listitem" class="campaign-item w-dyn-item"><div class="campaign-inner-block"><div class="campaign-thumbnail-block"><img src="images/campaign-thumbnail-6.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(5px)" alt="Faites un don pour soutenir les enfants pauvres et vulnérables" sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px" srcset="images/campaign-thumbnail-6-p-500.webp 500w, images/campaign-thumbnail-6.webp 636w" class="image-cover"/></div><div class="campaign-content-block"><div style="opacity:0;-webkit-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-title">Faites un don pour soutenir les enfants pauvres et vulnérables</div><p style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-summery-text">Fournir des livres, des fournitures et des opportunités d'apprentissage essentiels pour que chaque enfant puisse apprendre, grandir et construire un avenir meilleur.</p><ul role="list" class="campaign-feature-list"><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Kits scolaires</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Éducation de qualité gratuite</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Formation des enseignants</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Soutien aux élèves</div></li></ul></div></div></div></div></div></div><div data-w-id="511286b8-5f37-fc45-6740-5f2c744904eb" class="w-slide"><div class="campaign-list-wrapper w-dyn-list"><div role="list" class="campaign-list w-dyn-items"><div role="listitem" class="campaign-item w-dyn-item"><div class="campaign-inner-block"><div class="campaign-thumbnail-block"><img src="images/campaign-thumbnail-5.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(5px)" alt="Soutenir les enfants pauvres avec nourriture, soins et éducation" sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px" srcset="images/campaign-thumbnail-5-p-500.webp 500w, images/campaign-thumbnail-5.webp 636w" class="image-cover"/></div><div class="campaign-content-block"><div style="opacity:0;-webkit-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-title">Soutenir les enfants pauvres avec nourriture, soins et éducation</div><p style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-summery-text">Fournir des livres, des fournitures et des opportunités d'apprentissage essentiels pour que chaque enfant puisse apprendre, grandir et construire un avenir meilleur.</p><ul role="list" class="campaign-feature-list"><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Kits scolaires</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Éducation de qualité gratuite</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Formation des enseignants</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Soutien aux élèves</div></li></ul></div></div></div></div></div></div><div data-w-id="7269b2a5-dcf8-16f8-da8c-92e1b2f3e2aa" class="w-slide"><div class="campaign-list-wrapper w-dyn-list"><div role="list" class="campaign-list w-dyn-items"><div role="listitem" class="campaign-item w-dyn-item"><div class="campaign-inner-block"><div class="campaign-thumbnail-block"><img src="images/campaign-thumbnail-4.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(5px)" alt="Éduquer les enfants orphelins et vulnérables" sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px" srcset="images/campaign-thumbnail-4-p-500.webp 500w, images/campaign-thumbnail-4.webp 624w" class="image-cover"/></div><div class="campaign-content-block"><div style="opacity:0;-webkit-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-title">Éduquer les enfants orphelins et vulnérables</div><p style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-summery-text">Fournir des livres, des fournitures et des opportunités d'apprentissage essentiels pour que chaque enfant puisse apprendre, grandir et construire un avenir meilleur.</p><ul role="list" class="campaign-feature-list"><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Kits scolaires</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Éducation de qualité gratuite</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Formation des enseignants</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Soutien aux élèves</div></li></ul></div></div></div></div></div></div><div data-w-id="72e25f2a-7bfb-cdbb-4964-f781f7f2342a" class="w-slide"><div class="campaign-list-wrapper w-dyn-list"><div role="list" class="campaign-list w-dyn-items"><div role="listitem" class="campaign-item w-dyn-item"><div class="campaign-inner-block"><div class="campaign-thumbnail-block"><img src="images/campaign-thumbnail-3.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1.1, 1.1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(5px)" alt="Accès à la santé et soutien aux communautés vulnérables" sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px" srcset="images/campaign-thumbnail-3-p-500.webp 500w, images/campaign-thumbnail-3.webp 624w" class="image-cover"/></div><div class="campaign-content-block"><div style="opacity:0;-webkit-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-title">Accès à la santé et soutien aux communautés vulnérables</div><p style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-summery-text">Offrir des soins médicaux gratuits, des médicaments vitaux et des services de santé aux personnes ayant peu ou pas accès aux traitements.</p><ul role="list" class="campaign-feature-list"><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Cliniques médicales gratuites</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Aide médicamenteuse essentielle</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Campagnes de sensibilisation à la santé</div></li><li style="opacity:0;-webkit-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="campaign-feature-item"><div>Soins maternels et infantiles</div></li></ul></div></div></div></div></div></div></div><div data-w-id="c96ec4fa-a3b6-6e93-cdbe-110411427dd3" style="background-color:rgba(255,255,255,0)" class="slider-button campaign-slider-button is-left w-slider-arrow-left"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f905b6b94ada1e70c8b5da_icon-dark-arrow-left.svg" loading="lazy" style="opacity:1" alt="Arrow left icon" class="slider-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68f905b5f8899f2f35dd21e1_icon-white-arrow-left.svg" loading="lazy" style="opacity:0" alt="Arrow left icon" class="slider-icon-hover"/></div><div data-w-id="c96ec4fa-a3b6-6e93-cdbe-110411427dd5" style="background-color:rgba(255,255,255,0)" class="slider-button campaign-slider-button w-slider-arrow-right"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" loading="lazy" style="opacity:1" alt="Arrow right" class="slider-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68f905b5a34009cafd0936fd_icon-white-arrow-right.svg" loading="lazy" style="opacity:0" alt="Arrow right icon" class="slider-icon-hover"/></div><div class="hide w-slider-nav w-round w-num"></div></div></div></div></section><section class="section-program"><div class="section-space-bottom"><div class="w-layout-blockcontainer container w-container"><div class="max-width-636 margin-inline-auto"><div class="section-content-block text-center"><div data-w-id="2b28242c-e789-32a0-8829-ca01cca7cd28" style="opacity:0" class="section-tag">Nos Programmes</div><h2 class="section-title">Transformer les cœurs en actions pour le changement</h2></div></div><div class="program-area"><div class="programs-list-wrap"><div class="program-single-item-block is-1"><div class="program-list-wrapper w-dyn-list"><div role="list" class="program-list w-dyn-items"><div role="listitem" class="program-item w-dyn-item"><div data-w-id="c9defdc6-526b-a7ed-3003-607d145464f3" class="program-item-block"><a aria-label="program" href="/programs/food-relief" class="program-thumbnail-block w-inline-block"><img src="images/program-thumbnail-6.jpg" loading="lazy" alt="Aide alimentaire" class="image-cover"/></a><div class="program-content-block"><div class="program-title">Aide alimentaire</div><div class="program-summery">Soutenir les enfants défavorisés avec des ressources pédagogiques et un accès à l'école.</div><a data-w-id="53def81c-4348-db53-833c-080013cb70a0" href="/programs/food-relief" class="icon-text-link w-inline-block"><div class="link-text-block"><div class="link-text">Voir le programme</div></div><div class="icon-block"><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon"/><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon-hover"/></div></a></div></div></div></div></div></div><div class="program-single-item-block is-2"><div class="program-list-wrapper w-dyn-list"><div role="list" class="program-list w-dyn-items"><div role="listitem" class="program-item w-dyn-item"><div data-w-id="aa2f5e1c-135c-38a5-b118-51222627ecce" class="program-item-block"><a aria-label="program" href="/programs/water-initiative" class="program-thumbnail-block w-inline-block"><img src="images/program-thumbnail-4.jpg" loading="lazy" alt="Initiative eau propre" class="image-cover"/></a><div class="program-content-block"><div class="program-title">Initiative eau propre</div><div class="program-summery">Apporter des solutions d'eau potable et d'assainissement aux zones défavorisées pour réduire les maladies.</div><a data-w-id="53def81c-4348-db53-833c-080013cb70a0" href="/programs/water-initiative" class="icon-text-link w-inline-block"><div class="link-text-block"><div class="link-text">Voir le programme</div></div><div class="icon-block"><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon"/><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon-hover"/></div></a></div></div></div></div></div></div><div class="program-single-item-block is-3"><div class="program-list-wrapper w-dyn-list"><div role="list" class="program-list w-dyn-items"><div role="listitem" class="program-item w-dyn-item"><div data-w-id="172610de-d9b3-3705-f6df-d61a5bae824d" class="program-item-block"><a aria-label="program" href="/programs/community-support" class="program-thumbnail-block w-inline-block"><img src="images/program-thumbnail-2.jpg" loading="lazy" alt="Soutien communautaire" class="image-cover"/></a><div class="program-content-block"><div class="program-title">Soutien communautaire</div><div class="program-summery">Renforcer activement les communautés locales grâce aux compétences, aux emplois et aux ressources.</div><a data-w-id="53def81c-4348-db53-833c-080013cb70a0" href="/programs/community-support" class="icon-text-link w-inline-block"><div class="link-text-block"><div class="link-text">Voir le programme</div></div><div class="icon-block"><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon"/><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon-hover"/></div></a></div></div></div></div></div></div></div><div class="programs-list-wrap is-right"><div class="program-single-item-block is-4"><div class="program-list-wrapper w-dyn-list"><div role="list" class="program-list w-dyn-items"><div role="listitem" class="program-item w-dyn-item"><div data-w-id="5faf938c-fbe9-93a2-1091-270e40854913" class="program-item-block"><a aria-label="program" href="/programs/child-education" class="program-thumbnail-block w-inline-block"><img src="images/program-thumbnail-5.jpg" loading="lazy" alt="Éducation des enfants" class="image-cover"/></a><div class="program-content-block"><div class="program-title">Éducation des enfants</div><div class="program-summery">Soutenir les enfants défavorisés avec des ressources pédagogiques et un accès à l'école.</div><a data-w-id="53def81c-4348-db53-833c-080013cb70a0" href="/programs/child-education" class="icon-text-link w-inline-block"><div class="link-text-block"><div class="link-text">Voir le programme</div></div><div class="icon-block"><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon"/><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon-hover"/></div></a></div></div></div></div></div></div><div class="program-single-item-block is-5"><div class="program-list-wrapper w-dyn-list"><div role="list" class="program-list w-dyn-items"><div role="listitem" class="program-item w-dyn-item"><div data-w-id="5faf938c-fbe9-93a2-1091-270e40854921" class="program-item-block"><a aria-label="program" href="/programs/safe-housing" class="program-thumbnail-block w-inline-block"><img src="images/program-thumbnail-3.jpg" loading="lazy" alt="Logement sûr" class="image-cover"/></a><div class="program-content-block"><div class="program-title">Logement sûr</div><div class="program-summery">Construire des abris et des foyers sûrs pour les familles sans-abri, leur offrant protection et soins.</div><a data-w-id="53def81c-4348-db53-833c-080013cb70a0" href="/programs/safe-housing" class="icon-text-link w-inline-block"><div class="link-text-block"><div class="link-text">Voir le programme</div></div><div class="icon-block"><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon"/><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon-hover"/></div></a></div></div></div></div></div></div><div class="program-single-item-block is-6"><div class="program-list-wrapper w-dyn-list"><div role="list" class="program-list w-dyn-items"><div role="listitem" class="program-item w-dyn-item"><div data-w-id="5faf938c-fbe9-93a2-1091-270e4085492f" class="program-item-block"><a aria-label="program" href="/programs/healthcare-access" class="program-thumbnail-block w-inline-block"><img src="images/program-thumbnail-1.jpg" loading="lazy" alt="Accès aux soins" class="image-cover"/></a><div class="program-content-block"><div class="program-title">Accès aux soins</div><div class="program-summery">Offrir des bilans médicaux gratuits, des médicaments essentiels et des programmes de sensibilisation à la santé pour les communautés vulnérables.</div><a data-w-id="53def81c-4348-db53-833c-080013cb70a0" href="/programs/healthcare-access" class="icon-text-link w-inline-block"><div class="link-text-block"><div class="link-text">Voir le programme</div></div><div class="icon-block"><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon"/><img loading="lazy" src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" alt="Arrow right" class="link-icon-hover"/></div></a></div></div></div></div></div></div></div></div></div></div></section><section class="section-testimonial"><div class="section-space-bottom"><div class="w-layout-blockcontainer container w-container"><div class="position-realtive"><div class="max-width-636"><div class="section-content-block"><div data-w-id="7497179e-1a47-56c1-31f4-09fc8a7a6687" style="opacity:0" class="section-tag">Ce que disent nos donateurs</div><h2 class="section-title">Ce que disent nos donateurs</h2></div></div><div data-delay="4000" data-animation="slide" class="slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true"><div class="testimonial-slider-mask w-slider-mask"><div class="testimonial-slide w-slide"><div class="slider-content-block"><div class="rating-wrapper"><div class="rating-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/></div><div class="text-small">5.0/0</div></div><blockquote class="testimonial-quote">“Faire un don à KTZ GROUP SAS était vraiment spécial — leur bienveillance et leur honnêteté m’ont profondément inspiré chaque jour, rempli d’espoir.”</blockquote><div class="testimonial-user-info-block"><div class="testimonil-image-block"><img src="images/testimonial-avater-1.jpg" loading="lazy" alt="Portrait of a man with dark hair and beard wearing a suit and white shirt against a light background." class="image-cover"/></div><div class="testimonial-user-content-block"><div class="testimonial-user-name">Ethan Cole</div><div>Donateur régulier</div></div></div></div></div><div class="testimonial-slide w-slide"><div class="slider-image-block"><div class="rating-wrapper"><div class="rating-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/></div><div class="text-small">5.0/0</div></div><blockquote class="testimonial-quote">“Faire un don à KTZ GROUP SAS était vraiment spécial — leur bienveillance et leur honnêteté m’ont profondément inspiré chaque jour, rempli d’espoir.”</blockquote><div class="testimonial-user-info-block"><div class="testimonial-user-content-block"><div class="testimonial-user-name">Ethan Cole</div><div>Donateur régulier</div></div></div><div class="testimonial-image-block"><img src="images/testimonial-image.jpg" loading="lazy" alt="Smiling man with glasses, beard, and gray hair wearing a blue blazer and light blue shirt in an office setting." class="image-cover"/></div><div class="background-overlay"></div></div></div><div class="testimonial-slide w-slide"><div class="slider-content-block"><div class="rating-wrapper"><div class="rating-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/></div><div class="text-small">4,9/5</div></div><blockquote class="testimonial-quote">“Notre partenariat avec la fondation nous a permis de soutenir de nombreux enfants — leur sérieux et leur professionnalisme en font un partenaire exemplaire.”</blockquote><div class="testimonial-user-info-block"><div class="testimonil-image-block"><img src="images/testimonial-avater-2.jpg" loading="lazy" alt="Smiling man with short curly hair and beard standing outdoors in sunlight." class="image-cover"/></div><div class="testimonial-user-content-block"><div class="testimonial-user-name">Jakob Alison</div><div>Représentant d'organisation partenaire</div></div></div></div></div><div class="testimonial-slide w-slide"><div class="slider-image-block"><div class="rating-wrapper"><div class="rating-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/></div><div class="text-small">5.0/0</div></div><blockquote class="testimonial-quote">“Faire un don à KTZ GROUP SAS était vraiment spécial — leur bienveillance et leur honnêteté m’ont profondément inspiré chaque jour, rempli d’espoir.”</blockquote><div class="testimonial-user-info-block"><div class="testimonial-user-content-block"><div class="testimonial-user-name">Ethan Cole</div><div>Donateur régulier</div></div></div><div class="testimonial-image-block"><img src="images/testimonial-image.jpg" loading="lazy" alt="Smiling man with glasses, beard, and gray hair wearing a blue blazer and light blue shirt in an office setting." class="image-cover"/></div><div class="background-overlay"></div></div></div><div class="testimonial-slide w-slide"><div class="slider-content-block"><div class="rating-wrapper"><div class="rating-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/></div><div class="text-small">5.0/0</div></div><blockquote class="testimonial-quote">“Faire un don à KTZ GROUP SAS était vraiment spécial — leur bienveillance et leur honnêteté m’ont profondément inspiré chaque jour, rempli d’espoir.”</blockquote><div class="testimonial-user-info-block"><div class="testimonil-image-block"><img src="images/testimonial-avater-1.jpg" loading="lazy" alt="Portrait of a man with dark hair and beard wearing a suit and white shirt against a light background." class="image-cover"/></div><div class="testimonial-user-content-block"><div class="testimonial-user-name">Ethan Cole</div><div>Donateur régulier</div></div></div></div></div><div class="testimonial-slide w-slide"><div class="slider-content-block"><div class="rating-wrapper"><div class="rating-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68fc66118e3f181da5df35cc_icon-review-star.svg" loading="lazy" alt="Review star icon" class="review-icon"/></div><div class="text-small">4,9/5</div></div><blockquote class="testimonial-quote">“Notre partenariat avec la fondation nous a permis de soutenir de nombreux enfants — leur sérieux et leur professionnalisme en font un partenaire exemplaire.”</blockquote><div class="testimonial-user-info-block"><div class="testimonil-image-block"><img src="images/testimonial-avater-2.jpg" loading="lazy" alt="Smiling man with short curly hair and beard standing outdoors in sunlight." class="image-cover"/></div><div class="testimonial-user-content-block"><div class="testimonial-user-name">Jakob Alison</div><div>Représentant d'organisation partenaire</div></div></div></div></div></div><div data-w-id="6fde248e-e6e3-ef6d-8f3b-7cfeec844f6d" style="background-color:rgba(255,255,255,0)" class="slider-button testimonial-slider-button is-left w-slider-arrow-left"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f905b6b94ada1e70c8b5da_icon-dark-arrow-left.svg" loading="lazy" style="opacity:1" alt="Arrow left icon" class="slider-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68f905b5f8899f2f35dd21e1_icon-white-arrow-left.svg" loading="lazy" style="opacity:0" alt="Arrow left icon" class="slider-icon-hover"/></div><div data-w-id="6fde248e-e6e3-ef6d-8f3b-7cfeec844f6f" style="background-color:rgba(255,255,255,0)" class="slider-button testimonial-slider-button w-slider-arrow-right"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348a6908dac38340787_icon-dark-arrow-left.svg" loading="lazy" style="opacity:1" alt="Arrow right" class="slider-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68f905b5a34009cafd0936fd_icon-white-arrow-right.svg" loading="lazy" style="opacity:0" alt="Arrow right icon" class="slider-icon-hover"/></div><div class="hide w-slider-nav w-round w-num"></div></div></div></div></div></section><section class="section-blog"><div class="section-space-bottom"><div class="w-layout-blockcontainer container w-container"><div class="max-width-636 margin-inline-auto"><div class="section-content-block text-center"><div data-w-id="9a1cbd87-254b-c1b9-83e3-206fa4bc7b04" style="opacity:0" class="section-tag">Nos derniers articles</div><h2 class="section-title">Des histoires inspirantes de générosité et d'espoir</h2></div></div><div class="blog-area"><div id="w-node-_055c3c88-b01a-7380-82b6-128502b4f4a6-5cbb11d9" class="blog-grid"><div class="blog-list-wrapper w-dyn-list"><div role="list" class="blog-grid-list w-dyn-items"><div data-w-id="b0cdf1a6-4ec2-4775-5897-a131aa37004a" role="listitem" class="blog-item w-dyn-item"><div class="blog-grid-item-block"><div class="blog-grid-content-block"><a href="/blog-categories/community" class="blog-category">Communauté</a><div class="blog-content-inner-block"><div class="blog-post-meta">Octobre 25, 2025</div><a href="/post/clean-water-brings-hope-to-rural-families" class="blog-link text-white heading-4">L'eau potable apporte l'espoir aux familles rurales</a></div></div><div class="blog-thumbnail"><img src="images/blog-thumbnail-7.png" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="L'eau potable apporte l'espoir aux familles rurales" sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px" srcset="images/blog-thumbnail-7-p-500.png 500w, images/blog-thumbnail-7.png 636w" class="image-cover"/></div><div class="multiply-overlay"></div></div></div></div></div></div><div class="blog-list-block"><div class="blog-list-wrapper w-dyn-list"><div role="list" class="blog-listing-list w-dyn-items"><div data-w-id="15967d1e-ba36-bc3b-ee33-f7fb740fa1ef" role="listitem" class="blog-item w-dyn-item"><div class="blog-list-item"><a aria-label="blog" href="/post/food-relief-that-saves-lives-during-disasters" class="blog-list-image-link w-inline-block"><img src="images/blog-thumbnail-6.png" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="image-cover"/></a><div class="blog-content-bock"><a href="/blog-categories/community" class="blog-category">Communauté</a><div class="blog-content-inner-block"><div class="blog-post-meta">Octobre 25, 2025</div><a href="/post/food-relief-that-saves-lives-during-disasters" class="blog-link heading-5">L'aide alimentaire qui sauve des vies lors des catastrophes</a></div></div></div></div><div data-w-id="15967d1e-ba36-bc3b-ee33-f7fb740fa1ef" role="listitem" class="blog-item w-dyn-item"><div class="blog-list-item"><a aria-label="blog" href="/post/education-opens-doors-for-underprivileged" class="blog-list-image-link w-inline-block"><img src="images/blog-thumbnail-5.png" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="image-cover"/></a><div class="blog-content-bock"><a href="/blog-categories/insights" class="blog-category">Perspectives</a><div class="blog-content-inner-block"><div class="blog-post-meta">Octobre 25, 2025</div><a href="/post/education-opens-doors-for-underprivileged" class="blog-link heading-5">L'éducation ouvre des portes aux plus défavorisés</a></div></div></div></div></div></div></div></div></div></div></section><section class="section-faq"><div class="section-space-bottom"><div class="w-layout-blockcontainer container w-container"><div class="faq-area"><div class="faq-right-side"><div class="section-content-block"><div data-w-id="c3a30d95-87a1-3866-8128-61cdd73b0e4b" style="opacity:0" class="section-tag">Foire aux questions</div><h2 class="section-title">Questions fréquemment posées</h2></div><div class="faq-image-block"><img src="images/faq-image-block.jpg" loading="lazy" style="opacity:0" data-w-id="c3a30d95-87a1-3866-8128-61cdd73b0e50" alt="Fermer-up of two smiling children with curly hair standing close together." class="faq-image"/><div data-w-id="c3a30d95-87a1-3866-8128-61cdd73b0e51" style="opacity:0" class="faq-content-block"><div class="heading-5">La Fondation Mains Secourables répand la bienveillance grâce à de simples initiatives de don.</div><a data-w-id="eceab22d-dd01-bff9-a338-09a47dd36469" href="/donation" class="button is-white w-inline-block"><div class="button-text-block"><div class="button-text">Faire un don</div><div class="button-text-hover">Faire un don</div></div><div class="button-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348ebff0b38a44459a5_icon-white-arrow-left.svg" loading="lazy" alt="Arrow right" class="button-icon"/><img src="cdn/68ef3516d8f3681d5cbb11b5/68f11348ebff0b38a44459a5_icon-white-arrow-left.svg" loading="lazy" alt="Arrow right" class="button-icon-hover"/></div></a></div><div class="multiply-overlay"></div></div></div><div class="faq-left-size"><div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="accordion-tabs w-tabs"><div class="accordion-tabs-menu w-tab-menu"><a data-w-tab="Tab 1" data-w-id="c3a30d95-87a1-3866-8128-61cdd73b0e5a" style="opacity:0" class="accordion-item w-inline-block w-tab-link w--current"><div class="accordion-head"><div class="accordion-title">Pourquoi faire confiance à notre association ?</div><div class="accordion-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68ff6a7adfd6632ee0865dd1_icon-dark-short-arrow-left.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" alt="Arrow right icon" class="accordion-icon"/></div></div><div style="height:0px" class="accordion-body"><div class="accordion-content-block"><p class="accordion-text">Nous garantissons une transparence totale dans chaque campagne. Du suivi détaillé des dons aux mises à jour en temps réel des projets, chaque action est partagée ouvertement avec nos donateurs. Nous croyons que lorsque vous donnez, vous méritez de voir le véritable impact de votre générosité — comment votre contribution transforme des vies et bâtit des communautés plus solides et plus heureuses.</p></div></div></a><a data-w-tab="Tab 2" data-w-id="c3a30d95-87a1-3866-8128-61cdd73b0e64" style="opacity:0" class="accordion-item w-inline-block w-tab-link"><div class="accordion-head"><div class="accordion-title">Comment les dons sont-ils utilisés pour aider les communautés ?</div><div class="accordion-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68ff6a7adfd6632ee0865dd1_icon-dark-short-arrow-left.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" alt="Arrow right icon" class="accordion-icon"/></div></div><div style="height:0px" class="accordion-body"><div class="accordion-content-block"><p class="accordion-text">Vos dons soutiennent directement des initiatives qui changent des vies : distribution alimentaire, éducation pour les enfants défavorisés et accès à l'eau potable dans les villages reculés. Chaque contribution est utilisée avec soin pour créer un changement durable, renforcer les communautés et atteindre ceux qui en ont le plus besoin — chaque jour.</p></div></div></a><a data-w-tab="Tab 3" data-w-id="c3a30d95-87a1-3866-8128-61cdd73b0e6e" style="opacity:0" class="accordion-item w-inline-block w-tab-link"><div class="accordion-head"><div class="accordion-title">Puis-je choisir une cause spécifique à soutenir ?</div><div class="accordion-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68ff6a7adfd6632ee0865dd1_icon-dark-short-arrow-left.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" alt="Arrow right icon" class="accordion-icon"/></div></div><div style="height:0px" class="accordion-body"><div class="accordion-content-block"><p class="accordion-text">Oui ! Vous pouvez explorer et choisir parmi un large éventail de campagnes — éducation des enfants, autonomisation des femmes, aide d'urgence, soutien médical, distribution alimentaire et développement communautaire. Chaque campagne est conçue pour apporter un changement concret et de l'espoir à ceux dans le besoin. Votre générosité compte.</p></div></div></a><a data-w-tab="Tab 4" data-w-id="c3a30d95-87a1-3866-8128-61cdd73b0e78" style="opacity:0" class="accordion-item w-inline-block w-tab-link"><div class="accordion-head"><div class="accordion-title">Comment assurons-nous la transparence de nos campagnes ?</div><div class="accordion-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68ff6a7adfd6632ee0865dd1_icon-dark-short-arrow-left.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" alt="Arrow right icon" class="accordion-icon"/></div></div><div style="height:0px" class="accordion-body"><div class="accordion-content-block"><p class="accordion-text">Nous partageons régulièrement des rapports détaillés, des témoignages inspirants et des mises à jour transparentes pour que chaque donateur voie comment sa contribution fait une vraie différence. Des bilans financiers aux histoires des bénéficiaires — nous vous tenons informé à chaque étape, en montrant comment chaque don est utilisé de manière responsable.</p></div></div></a><a data-w-tab="Tab 5" data-w-id="c3a30d95-87a1-3866-8128-61cdd73b0e82" style="opacity:0" class="accordion-item w-inline-block w-tab-link"><div class="accordion-head"><div class="accordion-title">Quel impact votre soutien a-t-il créé jusqu'à présent ?</div><div class="accordion-icon-block"><img src="cdn/68ef3516d8f3681d5cbb11b5/68ff6a7adfd6632ee0865dd1_icon-dark-short-arrow-left.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" alt="Arrow right icon" class="accordion-icon"/></div></div><div style="height:0px" class="accordion-body"><div class="accordion-content-block"><p class="accordion-text">Grâce à votre généreux soutien, nous avons nourri des centaines de familles, construit des abris sûrs et offert réconfort, éducation et espoir à d’innombrables personnes dans le besoin. Chaque petit geste de générosité, chaque don et chaque moment de compassion s’additionne — créant une communauté plus durable, plus forte et plus solidaire.</p></div></div></a></div><div class="hide w-tab-content"><div data-w-tab="Tab 1" class="w-tab-pane w--tab-active"></div><div data-w-tab="Tab 2" class="w-tab-pane"></div><div data-w-tab="Tab 3" class="w-tab-pane"></div><div data-w-tab="Tab 4" class="w-tab-pane"></div><div data-w-tab="Tab 5" class="w-tab-pane"></div></div></div></div></div></div></div></section></div><footer class="section-footer"><div class="footer-top"><div class="w-layout-blockcontainer container w-container"><div class="footer-top-area"><div class="footer-top-left"><a href="/" aria-current="page" class="footer-logo-link w-inline-block w--current"><span style="position:relative;display:inline-flex;align-items:center;justify-content:center;width:110px;height:110px;margin-left:12px;flex-shrink:0;">
-  <svg width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;"><g><animateTransform attributeName="transform" type="rotate" from="0 55 55" to="360 55 55" dur="12s" repeatCount="indefinite"/><image href="logo-ktzgroup-ring.png" x="0" y="0" width="110" height="110"/></g></svg><img src="logo-ktzgroup-center.png" alt="KTZ GROUP SAS" style="position:absolute;top:0;left:0;width:110px;height:110px;z-index:2;"/>
-</span></a><p>Chez KTZ GROUP SAS, nous rassemblons les communautés pour lutter contre la faim, offrir un abri et répandre la bienveillance envers ceux qui en ont le plus besoin. Chaque petit geste de générosité crée un changement durable.</p></div><div class="footer-top-right"><div class="heading-5">Newsletter</div><div class="margin-bottom-30">S'abonner pour rester informé</div><div class="form-block w-form"><form id="wf-form-CTA-Form" name="wf-form-CTA-Form" data-name="CTA Form" method="get" class="cta-form-block" data-wf-page-id="68ef3517d8f3681d5cbb11d9" data-wf-element-id="5f9c15c8-28f6-4875-fddc-9a740d525bf0" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"><input class="cta-text-field w-input" maxlength="256" name="email" data-name="E-mail" placeholder="Entrez votre e-mail address" type="email" id="email" required=""/><input type="submit" data-wait="Veuillez patienter..." class="submit-button w-button" value="Envoyer"/></form><div class="success-message w-form-done"><div>Merci! Votre message a bien été envoyé !</div></div><div class="error-message w-form-fail"><div>Oups ! Une erreur s'est produite lors de l'envoi du formulaire.</div></div></div></div></div></div></div><div class="footer-center"><div class="w-layout-blockcontainer container w-container"><div class="footer-widget-area"><div class="footer-widget-item"><div class="footer-title">Pages</div><div class="footer-nav-block"><a href="/" aria-current="page" class="footer-nav-link w--current">Accueil</a><a href="/about" class="footer-nav-link">Qui sommes-nous</a><a href="/programs" class="footer-nav-link">Nos Programmes</a><a href="/blogs" class="footer-nav-link">Blog</a><a href="/campaigns" class="footer-nav-link">Campagnes</a><a href="/faq" class="footer-nav-link">FAQ</a></div></div><div class="footer-widget-item"><div class="footer-title">Pages (CMS)</div><div class="footer-nav-block"><a href="https://donora.webflow.io/programs/food-relief" class="footer-nav-link">Détails du programme</a><a href="https://donora.webflow.io/post/clean-water-brings-hope-to-rural-families" class="footer-nav-link">Détails de l'article</a><a href="https://donora.webflow.io/campaigns/give-educating-orphaned-and-vulnerable-children" class="footer-nav-link">Détails des campagnes</a></div></div><div class="footer-widget-item"><div class="footer-title">Template</div><div class="footer-nav-block"><a href="/contact" class="footer-nav-link">Nous contacter</a><a href="https://donora.webflow.io/404" class="footer-nav-link">Page 404</a><a href="/licenses" class="footer-nav-link">Licence</a></div></div><div class="footer-widget-item"><div class="footer-title">Réseaux sociaux</div><div class="footer-nav-block"><a href="https://www.instagram.com/" target="_blank" class="footer-nav-link">Instagram</a><a href="https://www.linkedin.com/" target="_blank" class="footer-nav-link">LinkedIn</a><a href="https://www.youtube.com/" target="_blank" class="footer-nav-link">You Tube</a><a href="https://www.facebook.com/" target="_blank" class="footer-nav-link">Facebook</a><a href="https://www.x.com/" target="_blank" class="footer-nav-link">Twitter/X</a></div></div></div></div></div><div class="footer-bottom"><div class="w-layout-blockcontainer container w-container"><div class="footer-bottom-area"><div class="footer-copyright-text"><div>© 2025 KTZ GROUP SAS. Tous droits réservés.</div></div><div class="footer-bottom-nav-link-wrapper"><a href="/contact" target="_blank" class="footer-bottom-nav-link">Politique de confidentialité</a><a href="/contact" target="_blank" class="footer-bottom-nav-link">Conditions d'utilisations</a><a href="/contact" target="_blank" class="footer-bottom-nav-link">Paramètres des cookies</a></div></div></div></div></footer></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=68ef3516d8f3681d5cbb11b5" type="text/javascript"></script><script src="cdn/68ef3516d8f3681d5cbb11b5/js/webflow.schunk.d6c10c5410c344d6.js" type="text/javascript"></script><script src="cdn/68ef3516d8f3681d5cbb11b5/js/webflow.schunk.1f295822b02272c5.js" type="text/javascript"></script><script src="cdn/68ef3516d8f3681d5cbb11b5/js/webflow.schunk.61b534daaaeddbc7.js" type="text/javascript"></script><script src="cdn/68ef3516d8f3681d5cbb11b5/js/webflow.schunk.121b0d7ff03e0f4a.js" type="text/javascript"></script><script src="cdn/68ef3516d8f3681d5cbb11b5/js/webflow.dd840a32.a3892047ea3dbfd3.js" type="text/javascript"></script><script src="cdn/gsap/3.14.2/gsap.min.js" type="text/javascript"></script><script src="cdn/gsap/3.14.2/SplitText.min.js" type="text/javascript"></script><script src="cdn/gsap/3.14.2/ScrollTrigger.min.js" type="text/javascript"></script></body></html>
+<!-- PÔLES -->
+<section class="section" id="poles">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow" data-reveal>Nos pôles</p>
+      <h2 data-split>Cinq domaines, <span class="grad">un seul objectif</span></h2>
+      <p class="lead" data-reveal>KTZ GROUP SAS développe un portefeuille de projets complémentaires, chacun répondant à un besoin identifié sur le terrain centrafricain.</p>
+    </div>
+
+    <div class="bento" data-stagger>
+      <article class="card pole pole-main" data-tilt data-reveal>
+        <div class="pole-top">
+          <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+          <span class="tag">P1 — Emploi</span>
+        </div>
+        <h3>KTZ Emploi — Plateforme numérique d'emploi</h3>
+        <p>La première plateforme numérique centrafricaine dédiée à l'emploi. Elle met en relation directe employeurs et chercheurs d'emploi via <a href="https://www.ktzemploi.com" target="_blank" rel="noopener">www.ktzemploi.com</a> et application mobile Android. Gratuit pour les candidats, abonnements adaptés pour les employeurs.</p>
+        <ul class="chips">
+          <li>Alertes WhatsApp &amp; email</li>
+          <li>CVthèque vérifiée</li>
+          <li>Tableau de bord recruteur</li>
+          <li>Application Android</li>
+        </ul>
+        <a class="pole-link" href="https://www.ktzemploi.com" target="_blank" rel="noopener">Découvrir KTZ Emploi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        <div class="pole-mock" aria-hidden="true">
+          <div class="mock-bar"><i></i><i></i><i></i></div>
+          <div class="mock-row r1"></div><div class="mock-row r2"></div><div class="mock-row r3"></div>
+          <div class="mock-badge">+1 nouvelle offre</div>
+        </div>
+      </article>
+
+      <article class="card pole" data-tilt data-reveal>
+        <div class="pole-top">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1zM16 8a5 5 0 0 1 0 8M19 5a9 9 0 0 1 0 14"/></svg></span>
+          <span class="tag">P2 — Communication</span>
+        </div>
+        <h3>Conseil, Création &amp; Stratégie</h3>
+        <p>Communication institutionnelle, digitale, événementielle et création graphique pour entreprises, ONG et administrations publiques centrafricaines. Des messages qui résonnent avec les réalités locales.</p>
+      </article>
+
+      <article class="card pole" data-tilt data-reveal>
+        <div class="pole-top">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5M22 9v6"/></svg></span>
+          <span class="tag">P3 — Formation</span>
+        </div>
+        <h3>Centre de Formation &amp; Développement des Compétences</h3>
+        <p>Formations numériques (développement web, cybersécurité, IA, data) et professionnelles (CV, entrepreneuriat, gestion financière). Gratuites pour les bénéficiaires, financées par les activités commerciales du groupe.</p>
+      </article>
+
+      <article class="card pole" data-tilt data-reveal>
+        <div class="pole-top">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 3c4 4.5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6.5 6-11z"/><path d="M12 20v-6M9.5 15.5 12 14l2.5 1.5"/></svg></span>
+          <span class="tag">P4 — Agro-industrie</span>
+        </div>
+        <h3>Production &amp; Commercialisation d'Huile Végétale</h3>
+        <p>Production locale d'huile de palme et huiles végétales pour réduire la dépendance aux importations, créer des emplois agricoles, valoriser les terres et ressources centrafricaines.</p>
+      </article>
+
+      <article class="card pole" data-tilt data-reveal>
+        <div class="pole-top">
+          <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M8 10l2 2-2 2M13 14h3"/></svg></span>
+          <span class="tag">P5 — Digitalisation</span>
+        </div>
+        <h3>Accompagnement à la Transformation Numérique</h3>
+        <p>Audit digital, conseil en stratégie numérique, création de sites web et applications, mise en place de systèmes de gestion (RH, stocks, clients), formation des équipes aux nouveaux outils.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HISTOIRE -->
+<section class="section light" id="histoire">
+  <div class="container story">
+    <div class="story-copy">
+      <p class="eyebrow" data-reveal>Notre histoire</p>
+      <h2 data-split>Fondés par un Centrafricain, <span class="grad">pour la Centrafrique</span></h2>
+      <p data-reveal>KTZ Association et KTZ Group SAS sont deux structures complémentaires fondées et dirigées par <strong>Donald KITEZE</strong>, entrepreneur centrafricain, ingénieur en Microélectronique et Télécommunications.</p>
+      <p data-reveal>Convaincu que la République Centrafricaine possède des ressources humaines, naturelles et économiques immenses encore sous-exploitées, Donald KITEZE a créé ces deux structures avec une ambition claire : contribuer concrètement au développement économique et social de la RCA, en s'appuyant sur l'innovation, le numérique et la formation.</p>
+    </div>
+
+    <aside class="founder" data-reveal="scale" data-tilt>
+      <div class="founder-inner">
+        <div class="monogram"><span>D</span></div>
+        <h3>Donald KITEZE</h3>
+        <p class="role">Fondateur &amp; Directeur Général</p>
+        <p>Ingénieur en Microélectronique et Télécommunications, né en République Centrafricaine. Expérience professionnelle acquise entre la France et l'Afrique centrale. Présent à Bangui depuis le 29 juillet 2026.</p>
+        <ul class="chips">
+          <li>Ingénieur Télécoms</li>
+          <li>Entrepreneur</li>
+          <li>RCA · France</li>
+          <li>Afrique Centrale</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- VALEURS -->
+<section class="section" id="valeurs">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow" data-reveal>Nos valeurs</p>
+      <h2 data-split>Ce qui <span class="grad">nous guide</span></h2>
+    </div>
+    <ol class="values" data-stagger>
+      <li data-reveal><span class="num">01</span><h3>Ancrage local</h3><p>Nous créons des réponses adaptées au contexte centrafricain, pas des solutions importées.</p></li>
+      <li data-reveal><span class="num">02</span><h3>Excellence</h3><p>Prestations de qualité professionnelle, à la hauteur des meilleures pratiques internationales.</p></li>
+      <li data-reveal><span class="num">03</span><h3>Inclusion</h3><p>Les solutions payantes financent des services gratuits pour ceux qui n'y ont pas accès autrement.</p></li>
+      <li data-reveal><span class="num">04</span><h3>Intégrité</h3><p>Transparence totale avec nos partenaires, clients et bénéficiaires. Notre réputation repose sur la confiance.</p></li>
+      <li data-reveal><span class="num">05</span><h3>Innovation</h3><p>Outils numériques modernes pour résoudre des problèmes anciens, adaptés aux capacités techniques de la RCA.</p></li>
+      <li data-reveal><span class="num">06</span><h3>Impact</h3><p>Chaque projet est conçu pour produire un effet mesurable sur l'emploi, la formation et l'économie centrafricaine.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- RÉFÉRENCES (défilement horizontal) -->
+<section class="hscroll" id="references">
+  <div class="hs-sticky">
+    <div class="container hs-head">
+      <div>
+        <p class="eyebrow" data-reveal>Expériences documentées</p>
+        <h2 data-split><span class="grad">7 missions</span> réalisées</h2>
+        <p class="lead" data-reveal>Des prestations concrètes, vérifiables, réalisées depuis la création du groupe en 2026.</p>
+      </div>
+      <div class="hs-meter" aria-hidden="true">
+        <span class="hs-count">01</span><span class="hs-total">/ 07</span>
+        <div class="hs-bar"><i></i></div>
+      </div>
+    </div>
+    <div class="hs-viewport">
+      <ol class="hs-track">
+        <li class="ref card" data-tilt>
+          <span class="ref-num">R1</span>
+          <h3>Étude de marché &amp; sondage terrain — 70+ organisations à Bangui</h3>
+          <p class="ref-meta">KTZ Association / Autofinancé · Juin 2026</p>
+          <ul class="chips"><li>Communication</li><li>Terrain</li><li>269 entreprises</li></ul>
+        </li>
+        <li class="ref card" data-tilt>
+          <span class="ref-num">R2</span>
+          <h3>Dossier institutionnel KTZ Association &amp; KTZ Group SAS — multi-projets</h3>
+          <p class="ref-meta">KTZ Association &amp; KTZ Group SAS · Juin–Juil. 2026</p>
+          <ul class="chips"><li>Édition</li><li>Stratégie</li><li>Mise en page</li></ul>
+        </li>
+        <li class="ref card" data-tilt>
+          <span class="ref-num">R3</span>
+          <h3>44 lettres de correspondance institutionnelle aux ONG de Bangui</h3>
+          <p class="ref-meta">KTZ Association · Juin 2026</p>
+          <ul class="chips"><li>Rédaction</li><li>Protocole</li><li>ONG</li></ul>
+        </li>
+        <li class="ref card" data-tilt>
+          <span class="ref-num">R4</span>
+          <h3>Stratégie &amp; campagne de communication digitale — Lancement KTZ Emploi</h3>
+          <p class="ref-meta">KTZ Group SAS · Juin–Juil. 2026</p>
+          <ul class="chips"><li>Digital</li><li>Réseaux sociaux</li><li>WhatsApp</li></ul>
+        </li>
+        <li class="ref card" data-tilt>
+          <span class="ref-num">R5</span>
+          <h3>Conception graphique — Flyers &amp; supports visuels séminaire 18 août 2026</h3>
+          <p class="ref-meta">KTZ Group SAS · Juin 2026</p>
+          <ul class="chips"><li>Graphisme</li><li>PAO</li><li>Événementiel</li></ul>
+        </li>
+        <li class="ref card" data-tilt>
+          <span class="ref-num">R6</span>
+          <h3>Édition pédagogique — Guides, formulaires et supports de formation terrain</h3>
+          <p class="ref-meta">KTZ Association · Juin 2026</p>
+          <ul class="chips"><li>Pédagogie</li><li>Guides</li><li>Formation</li></ul>
+        </li>
+        <li class="ref card" data-tilt>
+          <span class="ref-num">R7</span>
+          <h3>Application web de gestion terrain — Tableau de suivi opérationnel en ligne (Netlify + Supabase)</h3>
+          <p class="ref-meta">KTZ Group SAS · Juin 2026 · <a href="https://ktz-suivi-sondage.netlify.app" target="_blank" rel="noopener">ktz-suivi-sondage.netlify.app ↗</a></p>
+          <ul class="chips"><li>Développement web</li><li>Supabase</li><li>Netlify</li><li>Temps réel</li></ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ÉQUIPE -->
+<section class="section" id="equipe">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow" data-reveal>Notre équipe</p>
+      <h2 data-split>Des experts <span class="grad">pluridisciplinaires</span></h2>
+      <p class="lead" data-reveal>Une équipe mobilisable dès notification du contrat, couvrant l'ensemble des profils requis pour nos missions.</p>
+    </div>
+    <div class="team" data-stagger>
+      <article class="member card lead-member" data-reveal data-tilt>
+        <div class="avatar"><span>D</span></div>
+        <h3>Donald KITEZE NGOUYOMBO</h3>
+        <p class="role">Chef de mission · Directeur Général</p>
+        <p>Ingénieur en Microélectronique et Télécommunications. Expertise en stratégie de communication, management de projet et coordination institutionnelle. Partenariat IECD.</p>
+      </article>
+      <article class="member card" data-reveal data-tilt>
+        <div class="avatar"><span>G</span></div>
+        <h3>Graphiste / Designer</h3>
+        <p class="role">Création graphique &amp; PAO</p>
+        <p>Expert en création graphique basé à Bangui. Maîtrise Adobe Illustrator, InDesign, Photoshop. Expérience en charte graphique institutionnelle et supports imprimés.</p>
+      </article>
+      <article class="member card" data-reveal data-tilt>
+        <div class="avatar"><span>J</span></div>
+        <h3>Journaliste / Rédacteur</h3>
+        <p class="role">Communication institutionnelle</p>
+        <p>Journaliste centrafricain expérimenté en projets de développement. Maîtrise du français administratif et du style des bailleurs de fonds internationaux.</p>
+      </article>
+      <article class="member card" data-reveal data-tilt>
+        <div class="avatar"><span>C</span></div>
+        <h3>Community Manager</h3>
+        <p class="role">Expert digital</p>
+        <p>Expert en communication digitale. Maîtrise Facebook, LinkedIn, X, campagnes sponsorisées et création de contenu numérique adapté au contexte centrafricain.</p>
+      </article>
+      <article class="member card" data-reveal data-tilt>
+        <div class="avatar"><span>P</span></div>
+        <h3>Photographe / Vidéaste</h3>
+        <p class="role">Production audiovisuelle</p>
+        <p>Photographe et vidéaste professionnel basé à Bangui. Expérimenté dans la couverture d'événements institutionnels. Maîtrise de la postproduction.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CHIFFRES -->
+<section class="section figures" id="chiffres">
+  <div class="figures-bg" aria-hidden="true">IMPACT</div>
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow" data-reveal>En chiffres</p>
+      <h2 data-split>KTZ GROUP SAS <span class="grad">aujourd'hui</span></h2>
+    </div>
+    <div class="figs" data-stagger>
+      <div class="fig" data-reveal><strong><span data-count="269">0</span><sup>+</sup></strong><p>Entreprises contactées lors de notre étude de marché à Bangui</p></div>
+      <div class="fig" data-reveal><strong><span data-count="7">0</span></strong><p>Missions documentées réalisées depuis le lancement en 2026</p></div>
+      <div class="fig" data-reveal><strong><span data-count="5">0</span></strong><p>Pôles d'activités complémentaires au service de la RCA</p></div>
+      <div class="fig" data-reveal><strong><span data-count="2">0</span></strong><p>Structures complémentaires : KTZ Association &amp; KTZ Group SAS</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODE -->
+<section class="section light" id="methode">
+  <div class="container method">
+    <div class="head sticky-head">
+      <p class="eyebrow" data-reveal>Notre méthode</p>
+      <h2 data-split>Comment <span class="grad">nous travaillons</span></h2>
+      <p class="lead" data-reveal>Notre approche repose sur trois phases éprouvées, de la conception à l'impact mesurable.</p>
+    </div>
+    <ol class="timeline">
+      <li class="tl-fill" aria-hidden="true"></li>
+      <li class="step" data-reveal="left">
+        <span class="node">1</span>
+        <p class="step-phase">Phase 1</p>
+        <h3>Diagnostic &amp; Conception</h3>
+        <p>Analyse approfondie des besoins terrain, identification des acteurs locaux, cartographie des ressources disponibles. Nous ne plaquons pas de solutions importées : chaque projet naît d'une compréhension précise du contexte centrafricain.</p>
+      </li>
+      <li class="step" data-reveal="left">
+        <span class="node">2</span>
+        <p class="step-phase">Phase 2</p>
+        <h3>Déploiement &amp; Exécution</h3>
+        <p>Mise en œuvre opérationnelle avec une équipe pluridisciplinaire basée à Bangui. Coordination locale, mobilisation des partenaires, suivi en temps réel via nos outils numériques de gestion terrain.</p>
+      </li>
+      <li class="step" data-reveal="left">
+        <span class="node">3</span>
+        <p class="step-phase">Phase 3</p>
+        <h3>Évaluation &amp; Impact</h3>
+        <p>Mesure des résultats contre des indicateurs définis en amont, reporting transparent aux partenaires et bailleurs, documentation des succès et des apprentissages pour capitaliser sur chaque mission.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- DIFFÉRENCIATEURS -->
+<section class="section" id="pourquoi">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow" data-reveal>Nos différenciateurs</p>
+      <h2 data-split>Pourquoi choisir <span class="grad">KTZ GROUP SAS ?</span></h2>
+    </div>
+    <div class="why" data-stagger>
+      <article class="card why-card" data-reveal data-tilt>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+        <h3>Ancrage centrafricain authentique</h3>
+        <p>Fondé et dirigé par un Centrafricain, avec une équipe locale. Nous connaissons les réalités du terrain, les codes culturels, et les besoins réels — pas depuis Paris ou Genève, mais depuis Bangui.</p>
+      </article>
+      <article class="card why-card" data-reveal data-tilt>
+        <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg></span>
+        <h3>Vision régionale Afrique Centrale</h3>
+        <p>Fondé en RCA, KTZ GROUP SAS ambitionne de rayonner sur toute l'Afrique Centrale avec des solutions numériques et économiques adaptées aux réalités du continent.</p>
+      </article>
+      <article class="card why-card" data-reveal data-tilt>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5z"/><path d="m2 13 10 5 10-5M2 17.5l10 5 10-5"/></svg></span>
+        <h3>Approche intégrée multi-secteurs</h3>
+        <p>Emploi, communication, formation, agro-industrie et numérique : là où d'autres se spécialisent, KTZ GROUP SAS pense les synergies entre secteurs pour un impact global plus fort sur l'économie centrafricaine.</p>
+      </article>
+      <article class="card why-card" data-reveal data-tilt>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+        <h3>Modèle inclusif &amp; autofinancé</h3>
+        <p>Les revenus commerciaux financent directement les services gratuits (formations, plateforme emploi pour les candidats). Un modèle économique responsable qui ne dépend pas uniquement de subventions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="aurora soft" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow" data-reveal>Travailler avec nous</p>
+      <h2 data-split>Contactez <span class="grad">KTZ GROUP SAS</span></h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info" data-stagger>
+        <a class="info" href="mailto:kitzdon37@gmail.com" data-reveal>
+          <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span><small>Email</small>kitzdon37@gmail.com</span>
+        </a>
+        <a class="info" href="https://www.ktzemploi.com" target="_blank" rel="noopener" data-reveal>
+          <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg></span>
+          <span><small>Site web</small>www.ktzemploi.com ↗</span>
+        </a>
+        <a class="info" href="https://wa.me/33754095087" target="_blank" rel="noopener" data-reveal>
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+          <span><small>France · WhatsApp</small>+33 7 54 09 50 87</span>
+        </a>
+        <a class="info" href="tel:+23670118900" data-reveal>
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+          <span><small>Bangui · RCA</small>+236 70 11 89 00</span>
+        </a>
+        <div class="info" data-reveal>
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <span><small>Siège social</small>Avenue du 15 Mars, Cité Kossi, PK12<br>Bégoua, Bangui-Kagas — RCA<br><em>RCCM : CA/BG/2025B2952 · NIU : 2362026M63601D</em></span>
+        </div>
+        <div class="partners" data-reveal>
+          <p class="eyebrow">Type de partenariat</p>
+          <ul class="chips big">
+            <li>Partenariat commercial</li>
+            <li>Partenariat institutionnel</li>
+            <li>Financement &amp; investissement</li>
+            <li>Appel d'offres &amp; marchés publics</li>
+          </ul>
+        </div>
+      </div>
+
+      <form class="form card" id="contact-form" data-reveal="scale" novalidate>
+        <h3>Envoyer un message</h3>
+        <div class="field"><input id="f-name" name="name" required placeholder=" " autocomplete="name"><label for="f-name">Nom &amp; prénom</label></div>
+        <div class="field"><input id="f-email" name="email" type="email" required placeholder=" " autocomplete="email"><label for="f-email">Email</label></div>
+        <div class="field"><input id="f-org" name="org" placeholder=" " autocomplete="organization"><label for="f-org">Organisation</label></div>
+        <div class="field">
+          <select id="f-subject" name="subject" required>
+            <option value="" selected disabled>Choisir le type de demande…</option>
+            <option>Partenariat commercial</option>
+            <option>Partenariat institutionnel</option>
+            <option>Financement &amp; investissement</option>
+            <option>Appel d'offres</option>
+            <option>Recrutement &amp; emploi</option>
+            <option>Formation</option>
+            <option>Autre</option>
+          </select>
+          <label for="f-subject" class="fixed">Objet</label>
+        </div>
+        <div class="field"><textarea id="f-msg" name="message" rows="5" required placeholder=" "></textarea><label for="f-msg">Message</label></div>
+        <button class="btn btn-primary btn-block" type="submit" data-magnetic><span>Envoyer le message</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <a href="#top" class="footer-big" aria-label="Revenir en haut">KTZ GROUP SAS</a>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-mark">
+          <img class="ring" src="logo-ktzgroup-ring.png" alt="">
+          <img class="center" src="logo-ktzgroup-center.png" alt="">
+        </span>
+        <div>
+          <strong>KTZ GROUP SAS</strong>
+          <p>Société par Actions Simplifiée · RCA</p>
+        </div>
+      </div>
+      <p>Bangui, République Centrafricaine · 2026<br>Capital social : 100 000 F CFA<br>RCCM : CA/BG/2025B2952 · NIU : 2362026M63601D</p>
+      <p class="footer-acts">Emploi · Communication · Formation · Agro-industrie · Digitalisation</p>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year">2026</span> KTZ GROUP SAS. Tous droits réservés.</p>
+      <a href="#top" class="to-top">Haut de page ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js?v=3"></script>
+</body>
+</html>

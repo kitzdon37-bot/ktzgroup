@@ -29,7 +29,13 @@ const server = http.createServer((req, res) => {
 
   function serve(fp) {
     fs.readFile(fp, (err, data) => {
-      if (err) { res.writeHead(404); res.end('Not found: ' + req.url); return; }
+      if (err) {
+        fs.readFile(path.join(ROOT, '404.html'), (err404, page) => {
+          res.writeHead(404, { 'Content-Type': 'text/html' });
+          res.end(err404 ? 'Not found: ' + req.url : page);
+        });
+        return;
+      }
       const ext = path.extname(fp).toLowerCase();
       res.writeHead(200, {
         'Content-Type': MIME[ext] || 'application/octet-stream',
@@ -48,5 +54,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log('\n✅ Site Donora disponible sur : http://localhost:' + PORT + '\n');
+  console.log('\n✅ Site KTZ GROUP SAS disponible sur : http://localhost:' + PORT + '\n');
 });
