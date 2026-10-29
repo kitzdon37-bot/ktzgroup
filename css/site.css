@@ -209,6 +209,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 80%);
 }
 .hero-inner { position: relative; z-index: 2; display: grid; gap: 48px; align-items: center; }
+.hero-inner > * { min-width: 0; }
 @media (min-width: 980px) { .hero-inner { grid-template-columns: 1.15fr .85fr; } }
 
 .pill {
@@ -229,7 +230,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero-stats dt { font: 800 clamp(1.6rem, 3vw, 2.1rem)/1 'Sora', sans-serif; letter-spacing: -.03em; }
 .hero-stats dd { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); line-height: 1.35; }
 
-.hero-visual { position: relative; width: min(440px, 82vw); aspect-ratio: 1; margin-inline: auto; perspective: 1000px; }
+.hero-visual { position: relative; width: min(440px, 74vw, 100%); aspect-ratio: 1; margin-inline: auto; perspective: 1000px; }
 .hero-logo { position: absolute; inset: 9%; transition: transform .6s var(--ease); transform-style: preserve-3d; }
 .hero-logo img { position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 20px 40px rgba(0, 0, 0, .45)); }
 .hero-logo .center { transform: translateZ(40px); }
@@ -409,7 +410,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hs-total { color: var(--muted); font-weight: 600; }
 .hs-bar { flex-basis: 100%; height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; margin-top: 10px; }
 .hs-bar i { display: block; height: 100%; background: var(--grad); transform-origin: 0 50%; transform: scaleX(.14); }
-.hs-controls { display: flex; align-items: flex-end; gap: 28px; }
+.hs-controls { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 20px 28px; max-width: 100%; }
+@media (max-width: 400px) { .hs-meter { min-width: 0; flex: 1 1 150px; } .hs-arrow { width: 48px; height: 48px; } }
 .hs-arrows { display: flex; gap: 10px; }
 .hs-arrow {
   width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; padding: 0; cursor: pointer;
@@ -560,4 +562,10 @@ a.info:hover { border-color: rgba(242, 122, 15, .5); background: rgba(242, 122, 
   .js [data-reveal], .js [data-split] .wi, .js .hero [data-hero] { opacity: 1 !important; transform: none !important; }
   .grain { display: none; }
   .js #preloader { display: none; }
+}
+
+/* Très petits écrans : les mots les plus longs des titres doivent tenir sur une ligne */
+@media (max-width: 360px) {
+  .section h2, .hscroll h2 { font-size: 1.85rem; }
+  .hero h1 { font-size: 2.6rem; }
 }
