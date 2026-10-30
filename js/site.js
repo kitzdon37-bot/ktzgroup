@@ -245,6 +245,7 @@
 
   /* ── Grand texte en parallaxe ── */
   const figBg = document.querySelector('.figures-bg');
+  const parallax = [...document.querySelectorAll('[data-parallax]')];
 
   /* ── Boucle de défilement ── */
   let ticking = false;
@@ -266,6 +267,12 @@
       const fr = figBg.parentElement.getBoundingClientRect();
       figBg.style.setProperty('--px', `${(fr.top / innerHeight) * 20 - 5}vw`);
     }
+    if (!reduce) parallax.forEach(el => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      const t = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+      el.style.setProperty('--py', `${(-t * 14).toFixed(2)}%`);
+    });
     ticking = false;
   };
   addEventListener('scroll', () => {

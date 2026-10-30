@@ -555,3 +555,44 @@ a.info:hover { border-color: rgba(242, 122, 15, .5); background: rgba(242, 122, 
   .section h2, .hscroll h2 { font-size: 1.85rem; }
   .hero h1 { font-size: 2.6rem; }
 }
+
+/* ============================================================
+   Photos
+   ============================================================ */
+
+/* Hero : photo en fond, fondue vers le texte */
+.hero-photo {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-size: cover; background-position: center 30%;
+  opacity: .32; filter: saturate(1.15) sepia(.12);
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, .25) 0%, #000 55%);
+  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, .25) 0%, #000 55%);
+}
+.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse at 20% 50%, rgba(11, 11, 16, .75), transparent 60%), linear-gradient(180deg, transparent 60%, var(--bg)); }
+.pole-img { position: relative; margin: calc(-1 * clamp(24px, 3vw, 34px)) calc(-1 * clamp(24px, 3vw, 34px)) 8px; height: 190px; overflow: hidden; }
+.pole-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.pole-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, var(--surface)); }
+.card:hover .pole-img img { transform: scale(1.07); }
+/* Hero : zoom lent façon cinéma */
+.hero-photo { opacity: .42; animation: kenburns 24s ease-in-out infinite alternate; }
+@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.12) translate(-1.5%, -1%); } }
+
+/* Bandeaux photo plein écran */
+.impact { position: relative; overflow: hidden; min-height: 78vh; display: flex; align-items: center; isolation: isolate; }
+.impact-img {
+  position: absolute; inset: -18% 0; z-index: -2;
+  background-size: cover; background-position: center;
+  filter: saturate(1.1) contrast(1.05);
+  transform: translate3d(0, var(--py, 0), 0) scale(1.06); will-change: transform;
+}
+.impact::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(11, 11, 16, .88) 0%, rgba(11, 11, 16, .45) 55%, rgba(11, 11, 16, .15) 100%),
+    linear-gradient(180deg, var(--bg) 0%, transparent 18%, transparent 82%, var(--bg) 100%);
+}
+.impact-inner { padding-block: 120px; }
+.impact h2 { font-size: clamp(2.2rem, 6.4vw, 5.6rem); line-height: 1.02; max-width: 14ch; margin: 14px 0 22px; }
+.impact-sub { color: rgba(255, 255, 255, .88); text-shadow: 0 2px 14px rgba(0, 0, 0, .7); font-size: clamp(1rem, 1.6vw, 1.2rem); max-width: 46ch; }
+@media (max-width: 640px) { .impact { min-height: 64vh; } .impact-inner { padding-block: 90px; } }
+@media (prefers-reduced-motion: reduce) { .hero-photo { animation: none; } .impact-img { transform: none; } }
