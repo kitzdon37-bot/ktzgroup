@@ -244,6 +244,27 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .loaded .hero .hero-stats { transition-delay: .95s; }
 .loaded .hero .hero-visual { transition-delay: .3s; }
 
+/* Mobile et tablette : le logo tourne à côté du slogan */
+@media (max-width: 979px) {
+  .hero-inner { grid-template-columns: minmax(0, 1fr) auto; column-gap: 18px; row-gap: 0; }
+  .hero-copy { display: contents; }
+  .hero-copy > * { grid-column: 1 / -1; }
+  .hero-copy > .pill { grid-row: 1; justify-self: start; }
+  .hero-copy > h1 { grid-row: 2; }
+  .hero-copy > .hero-quote { grid-row: 3; grid-column: 1; align-self: center; margin: 0; }
+  .hero-visual { grid-row: 3; grid-column: 2; align-self: center; width: clamp(108px, 34vw, 190px); margin: 0 6px 0 0; }
+  .hero-copy > .hero-cta { grid-row: 4; }
+  .hero-copy > .hero-stats { grid-row: 5; }
+  .hero-logo .ring { animation-duration: 10s; }
+  .orbit b { width: 7px; height: 7px; margin-left: -3.5px; top: -3.5px; }
+  .orbit.o2 b { bottom: -3.5px; }
+  .glow { filter: blur(24px); }
+}
+/* Le logo continue de tourner doucement, même si le téléphone limite les animations */
+@media (max-width: 979px) and (prefers-reduced-motion: reduce) {
+  .hero-logo .ring { animation: spin 16s linear infinite !important; }
+}
+
 /* ── Bandeau défilant ── */
 .marquee { position: relative; z-index: 3; overflow: hidden; padding: 22px 0; background: var(--orange); transform: rotate(-2deg) scale(1.04); margin: -20px 0 0; box-shadow: 0 20px 60px -20px rgba(242, 122, 15, .6); }
 .marquee-track { display: flex; width: max-content; align-items: center; gap: 36px; animation: marquee 28s linear infinite; }
